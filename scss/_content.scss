@@ -1,0 +1,12 @@
+.imageList__img {
+    padding: 10px;
+    border: 1px solid grey;
+    border-radius: 3px;
+    img {
+        width: 100%;        
+    }
+    &:hover {
+        cursor: pointer;
+        background: #e7e7e7;
+    }
+}
