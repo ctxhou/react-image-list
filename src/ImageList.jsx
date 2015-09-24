@@ -14,7 +14,7 @@ var ImageList = React.createClass({
   },
 
   handleClick: function(data) {
-    console.log(data)
+    this.props.handleClickImage(data);
   },
 
   render: function() {

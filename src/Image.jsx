@@ -3,7 +3,7 @@ var Image = React.createClass({
 
   getDefaultProps: function() {
     return {
-      defautImgGrid: 'col col-3 px2 py2',
+      defautImgGrid: 'col col-4 px2 py2',
       defautImgClass: 'imageList__img'
     }
   },
