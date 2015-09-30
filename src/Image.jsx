@@ -11,12 +11,19 @@ var Image = React.createClass({
   getInitialState: function() {
     return {
       imgGrid: this.props.imgGrid || this.props.defautImgGrid,
-      imgClass: this.props.imgClass || this.props.defautImgClass
+      imgClass: this.props.imgClass || this.props.defautImgClass,
+      data: this.props.data
+    }
+  },
+
+  componentWillReceiveProps: function(nextProps) {
+    if (nextProps.data !== this.state.data) {
+      this.setState({data: nextProps.data })
     }
   },
 
   handleClick: function() {
-    this.props.handleClick(this.props.data);
+    this.props.handleClick(this.state.data);
   },
 
   render: function() {
@@ -24,7 +31,7 @@ var Image = React.createClass({
       <div className={this.state.imgGrid}
             onClick={this.handleClick}>
         <div className={this.state.imgClass}>
-          <img src={this.props.data.url}/>
+          <img src={this.state.data.url}/>
         </div>
       </div>
     )

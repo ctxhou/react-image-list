@@ -9,7 +9,8 @@ var ImageList = React.createClass({
 
   getInitialState: function() {
     return {
-      imgWrapper: this.props.imgWrapper || this.props.defautImgWrapper
+      imgWrapper: this.props.imgWrapper || this.props.defautImgWrapper,
+      imageData: this.props.imageData
     }
   },
 
@@ -17,10 +18,16 @@ var ImageList = React.createClass({
     this.props.handleClickImage(data);
   },
 
+  componentWillReceiveProps: function(nextProps) {
+    if (nextProps.imageData !== this.state.imageData) {
+      this.setState({imageData: nextProps.imageData })
+    }
+  },
+
   render: function() {
     var that = this;
     var imageList = [];
-    this.props.imageData.forEach(function(data) {
+    this.state.imageData.forEach(function(data) {
       imageList.push(<Image data={data}
                             imgClass={that.state.imgClass}
                             handleClick={that.handleClick}/>)
