@@ -15,7 +15,9 @@ var ImageList = React.createClass({
   },
 
   handleClick: function(data) {
-    this.props.handleClickImage(data);
+    if(this.props.handleClickImage){
+      this.props.handleClickImage(data);
+    }
   },
 
   componentWillReceiveProps: function(nextProps) {
@@ -29,7 +31,8 @@ var ImageList = React.createClass({
     var imageList = [];
     this.state.imageData.forEach(function(data) {
       imageList.push(<Image data={data}
-                            imgClass={that.state.imgClass}
+                            imgClass={that.props.imgClass}
+                            imgGrid={that.props.imgGrid}
                             handleClick={that.handleClick}/>)
     })
 
