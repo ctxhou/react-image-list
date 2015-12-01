@@ -1,5 +1,6 @@
 var React = require('react');
-var Image = require('./Image.jsx');
+var Image = require('./Image');
+var style = require('./style');
 var ImageList = React.createClass({
   getDefaultProps: function() {
     return {
@@ -27,6 +28,7 @@ var ImageList = React.createClass({
   },
 
   render: function() {
+    console.log('yo')
     var that = this;
     var imageList = [];
     this.state.imageData.forEach(function(data) {

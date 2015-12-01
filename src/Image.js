@@ -36,7 +36,7 @@ var Image = React.createClass({
       </div>
     )
   }
-
+  
 });
 
 module.exports = Image;

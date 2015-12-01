@@ -1,1 +1,1 @@
-module.exports = require('./src/ImageList.jsx');
+module.exports = require('./src/ImageList');
