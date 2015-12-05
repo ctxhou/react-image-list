@@ -1,15 +1,11 @@
 {
   "name": "react-image-list",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "description": "react image list",
   "main": "index.js",
-  "peerDependencies": {
-    "react": "^0.14.0"
-  },
   "dependencies": {
     "classnames": "^2.1.3",
-    "react": "^0.14.0",
-    "react-dom": "^0.14.0"
+    "react": "^0.13.0"
   },
   "devDependencies": {
     "babel-core": "^5.4.7",
@@ -32,7 +28,7 @@
     "build": "npm run clean && npm run build:webpack",
     "clean": "rimraf dist",
     "build:webpack": "NODE_ENV=production webpack --config webpack.config.prod.js",
-    "build:lib": "NODE_ENV=production babel src --out-dir lib",
+    "build:lib": "babel -w --stage 0 src --out-dir lib",
     "css": "sass --watch scss/react-image-list.scss:dist/react-image-list.css"
   },
   "repository": {

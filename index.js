@@ -1,1 +1,1 @@
-module.exports = require('./src/ImageList');
+module.exports = require('./lib/ImageList');

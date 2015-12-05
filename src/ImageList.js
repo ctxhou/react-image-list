@@ -28,7 +28,6 @@ var ImageList = React.createClass({
   },
 
   render: function() {
-    console.log('yo')
     var that = this;
     var imageList = [];
     this.state.imageData.forEach(function(data) {

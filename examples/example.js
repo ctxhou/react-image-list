@@ -1,5 +1,5 @@
 var React = require('react');
-var ReactDOM = require('react-dom');
+// var ReactDOM = require('react-dom');
 var ImageList = require('../index');
 
 var App = React.createClass({
@@ -35,7 +35,7 @@ var data = [
   }
 ]
 
-ReactDOM.render(
+React.render(
   <App/>,
   document.getElementById('root')
 );
