@@ -1,6 +1,6 @@
 {
   "name": "react-image-list",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "react image list",
   "main": "index.js",
   "dependencies": {
@@ -39,7 +39,8 @@
     "react",
     "image",
     "react-image",
-    "react-image-list"
+    "react-image-list",
+    "react-component"
   ],
   "author": "ctxhou",
   "license": "MIT",
