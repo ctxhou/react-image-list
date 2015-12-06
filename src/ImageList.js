@@ -9,7 +9,6 @@ var ImageList = React.createClass({
   },
 
   getInitialState: function() {
-    console.log(this.props.wrapperClass)
     return {
       wrapperClass: this.props.wrapperClass || this.props.defautImgWrapper,
       imageData: this.props.imageData
