@@ -1,6 +1,6 @@
 var React = require('react');
 var Image = require('./Image');
-var style = require('./style');
+
 var ImageList = React.createClass({
   getDefaultProps: function() {
     return {
@@ -9,8 +9,9 @@ var ImageList = React.createClass({
   },
 
   getInitialState: function() {
+    console.log(this.props.wrapperClass)
     return {
-      imgWrapper: this.props.imgWrapper || this.props.defautImgWrapper,
+      wrapperClass: this.props.wrapperClass || this.props.defautImgWrapper,
       imageData: this.props.imageData
     }
   },
@@ -33,12 +34,12 @@ var ImageList = React.createClass({
     this.state.imageData.forEach(function(data) {
       imageList.push(<Image data={data}
                             imgClass={that.props.imgClass}
-                            imgGrid={that.props.imgGrid}
+                            gridClass={that.props.gridClass}
                             handleClick={that.handleClick}/>)
     })
 
     return (
-      <div className={this.state.imgWrapper}>
+      <div className={this.state.wrapperClass}>
         {imageList}
       </div>
     )

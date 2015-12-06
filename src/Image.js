@@ -10,7 +10,7 @@ var Image = React.createClass({
 
   getInitialState: function() {
     return {
-      imgGrid: this.props.imgGrid || this.props.defautImgGrid,
+      imgGrid: this.props.gridClass || this.props.defautImgGrid,
       imgClass: this.props.imgClass || this.props.defautImgClass,
       data: this.props.data
     }
