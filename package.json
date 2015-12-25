@@ -1,6 +1,6 @@
 {
   "name": "react-image-list",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "react image list",
   "main": "index.js",
   "peerDependencies": {
@@ -8,9 +8,7 @@
     "react-dom": "^0.14.0"
   },
   "dependencies": {
-    "classnames": "^2.1.3",
-    "react": "^0.14.0",
-    "react-dom": "^0.14.0"
+    "classnames": "^2.1.3"
   },
   "devDependencies": {
     "babel-core": "^5.4.7",
