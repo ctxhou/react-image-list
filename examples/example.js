@@ -1,11 +1,12 @@
 var React = require('react');
+var ReactDOM = require('react-dom');
 var ImageList = require('../index');
 
 var App = React.createClass({
   render: function() {
     return (
       <div>
-        <ImageLst imageData={data}/>
+        <ImageList imageData={data}/>
       </div>
     )
   }
@@ -34,7 +35,7 @@ var data = [
   }
 ]
 
-React.render(
+ReactDOM.render(
   <App/>,
   document.getElementById('root')
 );

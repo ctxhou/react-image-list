@@ -30,8 +30,9 @@ var ImageList = React.createClass({
   render: function() {
     var that = this;
     var imageList = [];
-    this.state.imageData.forEach(function(data) {
-      imageList.push(<Image data={data}
+    this.state.imageData.forEach(function(data, i) {
+      imageList.push(<Image key={i}
+                            data={data}
                             imgClass={that.props.imgClass}
                             gridClass={that.props.gridClass}
                             handleClick={that.handleClick}/>)
