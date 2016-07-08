@@ -6,7 +6,8 @@ var App = React.createClass({
   render: function() {
     return (
       <div>
-        <ImageList imageData={data}/>
+        <ImageList imageData={data}
+                   gridClass='sdfsdf'/>
       </div>
     )
   }
